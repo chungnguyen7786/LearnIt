@@ -15,3 +15,15 @@ Content-Type: application/json
   "username": "chungnguyen",
   "password": "chungnguyen"
 }
+
+### 
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+
+{
+  "title": "My first post",
+  "description": "abc",
+  "url": "google.com",
+  "status": "LEARNING"
+}
