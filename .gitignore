@@ -1,4 +1,4 @@
 node_modules
 .env
-Server/request.http
+request.http
  
