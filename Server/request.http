@@ -23,8 +23,13 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGYyODY2NWMxMjI5NzRiYjQzYWIxOGEiLCJpYXQiOjE2MjY1MDY5NzB9.NuG6I38Y8OthrfOJT-Bc9Oq993uflQIpczxwIIKRydA
 
 {
-  "title": "My second post",
-  "description": "react",
-  "url": "https://reactjs.org/",
+  "title": "Third post",
+  "description": "Express",
+  "url": "https://expressjs.com/",
   "status": "TO LEARN"
 }
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGYyODY2NWMxMjI5NzRiYjQzYWIxOGEiLCJpYXQiOjE2MjY1MDY5NzB9.NuG6I38Y8OthrfOJT-Bc9Oq993uflQIpczxwIIKRydA
