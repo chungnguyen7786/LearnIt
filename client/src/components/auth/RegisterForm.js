@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const RegisterForm = () => {
   return (
     <>
-      <Form>
+      <Form className='my-4'>
         <Form.Group className='mb-3'>
           <Form.Control
             type='text'
