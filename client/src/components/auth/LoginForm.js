@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
 import AlertMessage from '../layout/AlertMessage'
@@ -30,12 +30,10 @@ const LoginForm = () => {
 
     try {
       const loginData = await loginUser(loginForm)
-      if (loginData.success) {
-        // <Redirect to='/dashboard' />
-      } else {
+      if (!loginData.success) {
         setAlert({ type: 'danger', message: loginData.message })
-        //alert will be disappeared in 4s:
-        setTimeout(() => setAlert(null), 4000)
+        //alert will disappear after 5s:
+        setTimeout(() => setAlert(null), 5000)
       }
     } catch (error) {
       console.log(error)
