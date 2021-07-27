@@ -20,7 +20,7 @@ function App() {
           <Route
             exact
             path='/register'
-            render={(props ) => <Auth {...props} authRoute='register' />}
+            render={(props) => <Auth {...props} authRoute='register' />}
           />
           <ProtectedRoute exact path='/dashboard' component={Dashboard} />
         </Switch>
