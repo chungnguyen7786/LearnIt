@@ -32,7 +32,7 @@ const Dashboard = () => {
         <Spinner automation='border' variant='info' />
       </div>
     )
-  } else if (posts.lengt === 0) {
+  } else if (posts.length === 0) {
     body = (
       <>
         <Card className='text-center mx-5 my-5'>
