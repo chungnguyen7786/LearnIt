@@ -8,8 +8,12 @@ const AddPostModal = () => {
   // Context
   const { showAddPostModal, setShowAddPostModal } = useContext(PostContext)
 
+  const closeDialog = () => {
+    setShowAddPostModal(false)
+  }
+
   return (
-    <Modal show={showAddPostModal} animation={false}>
+    <Modal show={showAddPostModal}  onHide={closeDialog}>
       <Modal.Header closeButton>
         <Modal.Title>What do you want to learn?</Modal.Title>
       </Modal.Header>
@@ -46,7 +50,9 @@ const AddPostModal = () => {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant='secondary'>Cancel</Button>
+          <Button variant='secondary' onClick={closeDialog}>
+            Cancel
+          </Button>
           <Button variant='primary' type='submit'>
             LearnIt!
           </Button>

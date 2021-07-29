@@ -6,6 +6,8 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 import SinglePost from '../components/posts/SinglePost'
 import AddPostModal from '../components/posts/AddPostModal'
 import addIcon from '../assets/plus-circle-fill.svg'
@@ -21,7 +23,7 @@ const Dashboard = () => {
   const {
     postState: { posts, postsLoading },
     getPosts,
-    setShowAddPostModal
+    setShowAddPostModal,
   } = useContext(PostContext)
 
   // Start: Get all posts
@@ -62,12 +64,14 @@ const Dashboard = () => {
         </Row>
 
         {/* Open Add Post Modal */}
-        <Button
-          className='btn-floating'
-          onClick={setShowAddPostModal.bind(this, true)}
-        >
-          <img src={addIcon} alt='add-post' width='60' height='60' />
-        </Button>
+        <OverlayTrigger placement='left' overlay={<Tooltip>Add a new thing to learn</Tooltip>}>
+          <Button
+            className='btn-floating'
+            onClick={setShowAddPostModal.bind(this, true)}
+          >
+            <img src={addIcon} alt='add-post' width='60' height='60' />
+          </Button>
+        </OverlayTrigger>
       </>
     )
   }
