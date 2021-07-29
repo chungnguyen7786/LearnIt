@@ -14,7 +14,7 @@ const ActionButtons = ({ url, _id }) => {
       <Button className='post-button'>
         <img src={editIcon} alt='edit' width='24' height='24' />
       </Button>
-      <Button className='post-button' href={url} target='_blank'>
+      <Button className='post-button'>
         <img src={deleteIcon} alt='delete' width='24' height='24' />
       </Button>
     </>

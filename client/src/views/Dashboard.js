@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Toast from 'react-bootstrap/Toast'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import SinglePost from '../components/posts/SinglePost'
@@ -24,6 +25,8 @@ const Dashboard = () => {
     postState: { posts, postsLoading },
     getPosts,
     setShowAddPostModal,
+    showToast: { show, message, type },
+    setShowToast,
   } = useContext(PostContext)
 
   // Start: Get all posts
@@ -64,7 +67,10 @@ const Dashboard = () => {
         </Row>
 
         {/* Open Add Post Modal */}
-        <OverlayTrigger placement='left' overlay={<Tooltip>Add a new thing to learn</Tooltip>}>
+        <OverlayTrigger
+          placement='left'
+          overlay={<Tooltip>Add a new thing to learn</Tooltip>}
+        >
           <Button
             className='btn-floating'
             onClick={setShowAddPostModal.bind(this, true)}
@@ -80,6 +86,24 @@ const Dashboard = () => {
     <>
       {body}
       <AddPostModal />
+
+      {/* After post is added, show toast */}
+      <Toast
+        show={show}
+        style={{ position: 'fixed', top: '20%', right: '10px' }}
+        className={`bg-${type} text-white`}
+        onClose={setShowToast.bind(this, {
+          show: false,
+          message: '',
+          type: null,
+        })}
+        delay={3000}
+        autohide
+      >
+        <Toast.Body>
+          <strong>{message}</strong>
+        </Toast.Body>
+      </Toast>
     </>
   )
 }
