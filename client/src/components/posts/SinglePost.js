@@ -22,7 +22,6 @@ const SinglePost = ({ post: { _id, status, title, description, url } }) => (
           <Col>
             <p className='post-title'>{title}</p>
             <Button
-              pill
               variant={
                 status === 'LEARNED'
                   ? 'success'
