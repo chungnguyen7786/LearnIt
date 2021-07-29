@@ -5,6 +5,7 @@ import {
   POSTS_LOADED_FAIL,
   POSTS_LOADED_SUCCESS,
   ADD_POST,
+  DELETE_POST,
 } from './constants'
 import axios from 'axios'
 
@@ -37,7 +38,7 @@ const PostContextProvider = ({ children }) => {
     }
   }
 
-  // Add Post
+  // Add post
   const addPost = async (newPost) => {
     try {
       const response = await axios.post(`${apiUrl}/posts`, newPost)
@@ -52,6 +53,17 @@ const PostContextProvider = ({ children }) => {
     }
   }
 
+  // Delete post
+  const deletePost = async (postId) => {
+    try {
+      const response = await axios.delete(`${apiUrl}/posts/${postId}`)
+      if (response.data.success)
+        dispatch({ type: DELETE_POST, payload: postId })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   // Post context data
   const postContextData = {
     postState,
@@ -59,6 +71,7 @@ const PostContextProvider = ({ children }) => {
     showAddPostModal,
     setShowAddPostModal,
     addPost,
+    deletePost,
     showToast,
     setShowToast,
   }
