@@ -50,7 +50,7 @@ const Dashboard = () => {
             <Card.Text>
               Click the button below to track your first skill to learn
             </Card.Text>
-            <Button variant='primary'>LearnIt!</Button>
+            <Button variant='primary' onClick={setShowAddPostModal.bind(this, true)}>LearnIt!</Button>
           </Card.Body>
         </Card>
       </>

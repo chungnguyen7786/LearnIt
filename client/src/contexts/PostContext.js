@@ -20,7 +20,7 @@ const PostContextProvider = ({ children }) => {
   const [showAddPostModal, setShowAddPostModal] = useState(false)
 
   const [showToast, setShowToast] = useState({
-    show: true,
+    show: false,
     message: '',
     type: null,
   })
