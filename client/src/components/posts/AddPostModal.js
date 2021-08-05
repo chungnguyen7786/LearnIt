@@ -57,7 +57,7 @@ const AddPostModal = () => {
               onChange={onChangeNewPostForm}
             />
             <Form.Text id='title-help' muted>
-              Required
+              (*)Required
             </Form.Text>
           </Form.Group>
           <Form.Group>
@@ -73,7 +73,7 @@ const AddPostModal = () => {
           <Form.Group>
             <Form.Control
               type='text'
-              placeholder='Youtube Tutorial URL'
+              placeholder='Video Tutorial URL'
               name='url'
               value={url}
               onChange={onChangeNewPostForm}
