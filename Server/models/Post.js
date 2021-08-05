@@ -17,7 +17,7 @@ const PostSchema = new Schema ({
     enum: ['TO LEARN', 'LEARNING', 'LEARNED']
   },
   user: {
-    type: Schema.Types.ObjectId, //connect with user collection in daatabase
+    type: Schema.Types.ObjectId, //connect with user collection in database
     ref:  'users'
   }
 })

@@ -20,7 +20,7 @@ const connectDB = async () => {
 
     console.log(`MongoDB connected`)
   } catch (error) {
-    console.log(error.message)
+    console.error(error)
     process.exit(1) //exit with code "1" => reconnect
   }
 }

@@ -14,7 +14,7 @@ router.get('/', verifyToken, async (req, res) => {
     ])
     res.json({ success: true, posts })
   } catch (error) {
-    console.log(error)
+    console.error(error)
     res.status(500).json({ succsess: false, message: 'Internal server error.' })
   }
 })
@@ -44,7 +44,7 @@ router.post('/', verifyToken, async (req, res) => {
 
     res.json({ success: true, message: 'Happy learning!', post: newPost })
   } catch (error) {
-    console.log(error)
+    console.error(error)
     res.status(500).json({ succsess: false, message: 'Internal server error.' })
   }
 })
@@ -89,7 +89,7 @@ router.put('/:id', verifyToken, async (req, res) => {
       post: updatedPost,
     })
   } catch (error) {
-    console.log(error)
+    console.error(error)
     res.status(500).json({ succsess: false, message: 'Internal server error.' })
   }
 })
@@ -111,7 +111,7 @@ router.delete('/:id', verifyToken, async (req, res) => {
 
     res.json({ success: true, post: deletedPost })
   } catch (error) {
-    console.log(error)
+    console.error(error)
     res.status(500).json({ succsess: false, message: 'Internal server error.' })
   }
 })
