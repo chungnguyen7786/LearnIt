@@ -72,8 +72,9 @@ const AuthContextProvider = ({ children }) => {
 
       return response.data
     } catch (error) {
-      if (error.response.data) return error.response.data
-      else return { success: false, message: error.message }
+      return error.response.data
+        ? error.response.data
+        : { success: false, message: error.message }
     }
   }
 

@@ -64,7 +64,7 @@ const PostContextProvider = ({ children }) => {
       if (response.data.success)
         dispatch({ type: DELETE_POST, payload: postId })
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 

@@ -35,7 +35,7 @@ const LoginForm = () => {
         setTimeout(() => setAlert(null), 5000)
       }
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
