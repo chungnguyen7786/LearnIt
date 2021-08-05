@@ -1,6 +1,4 @@
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
+import { Modal, Button, Form } from 'react-bootstrap'
 import { useContext, useState } from 'react'
 import { PostContext } from '../../contexts/PostContext'
 
@@ -59,10 +57,9 @@ const AddPostModal = () => {
               onChange={onChangeNewPostForm}
             />
             <Form.Text id='title-help' muted>
-              (*)Required
+              Required
             </Form.Text>
           </Form.Group>
-          <br />
           <Form.Group>
             <Form.Control
               as='textarea'
@@ -73,11 +70,10 @@ const AddPostModal = () => {
               onChange={onChangeNewPostForm}
             />
           </Form.Group>
-          <br />
           <Form.Group>
             <Form.Control
               type='text'
-              placeholder='Video Tutorial URL'
+              placeholder='Youtube Tutorial URL'
               name='url'
               value={url}
               onChange={onChangeNewPostForm}

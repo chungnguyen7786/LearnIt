@@ -34,7 +34,7 @@ export const postReducer = (state, action) => {
       return {
         ...state,
         posts: state.posts.filter((post) => post._id !== payload),
-      }
+      } 
 
     case FIND_POST:
       return { ...state, post: payload }

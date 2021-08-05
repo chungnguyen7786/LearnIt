@@ -1,6 +1,4 @@
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button'
+import { Navbar, Nav, Button } from 'react-bootstrap'
 import learnItLogo from '../../assets/logo.svg'
 import logoutIcon from '../../assets/logout.svg'
 import { Link } from 'react-router-dom'

@@ -1,14 +1,17 @@
 import { useContext, useEffect } from 'react'
 import { PostContext } from '../contexts/PostContext'
 import { AuthContext } from '../contexts/AuthContext'
-import Spinner from 'react-bootstrap/Spinner'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Toast from 'react-bootstrap/Toast'
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
-import Tooltip from 'react-bootstrap/Tooltip'
+import {
+  Spinner,
+  Card,
+  Button,
+  Row,
+  Col,
+  Toast,
+  OverlayTrigger,
+  Tooltip,
+} from 'react-bootstrap'
+
 import SinglePost from '../components/posts/SinglePost'
 import AddPostModal from '../components/posts/AddPostModal'
 import UpdatePostModal from '../components/posts/UpdatePostModal'

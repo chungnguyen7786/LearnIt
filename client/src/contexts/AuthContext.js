@@ -1,6 +1,6 @@
 import { createContext, useReducer, useEffect } from 'react'
 import { authReducer } from '../reducers/authReducer'
-import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from './constants'
+import { apiUrl, LOCAL_STORAGE_TOKEN_NAME, SET_AUTH } from './constants'
 import axios from 'axios'
 import setAuthToken from '../utils/setAuthToken'
 
@@ -23,7 +23,7 @@ const AuthContextProvider = ({ children }) => {
       const response = await axios.get(`${apiUrl}/auth`)
       if (response.data.success) {
         dispatch({
-          type: 'SET_AUTH',
+          type: SET_AUTH,
           payload: { isAuthenticated: true, user: response.data.user },
         })
       }
@@ -31,7 +31,7 @@ const AuthContextProvider = ({ children }) => {
       localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME)
       setAuthToken(null)
       dispatch({
-        type: 'SET_AUTH',
+        type: SET_AUTH,
         payload: { isAuthenticated: false, user: null },
       })
     }
@@ -81,7 +81,7 @@ const AuthContextProvider = ({ children }) => {
   const logoutUser = () => {
     localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME)
     dispatch({
-      type: 'SET_AUTH',
+      type: SET_AUTH,
       payload: { isAuthenticated: false, user: null },
     })
   }

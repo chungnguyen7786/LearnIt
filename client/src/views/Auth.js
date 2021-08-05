@@ -3,7 +3,7 @@ import RegisterForm from '../components/auth/RegisterForm'
 import { AuthContext } from '../contexts/AuthContext'
 import { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
-import Spinner from 'react-bootstrap/Spinner'
+import { Spinner } from 'react-bootstrap'
 
 const Auth = ({ authRoute }) => {
   const {
@@ -26,7 +26,7 @@ const Auth = ({ authRoute }) => {
         {authRoute === 'register' && <RegisterForm />}
       </>
     )
-      
+
   return (
     <div className='landing'>
       <div className='dark-overlay'>
