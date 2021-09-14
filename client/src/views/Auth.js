@@ -9,7 +9,6 @@ const Auth = ({ authRoute }) => {
   const {
     authState: { authLoading, isAuthenticated },
   } = useContext(AuthContext)
-
   let body
 
   if (authLoading)

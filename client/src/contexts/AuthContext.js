@@ -88,7 +88,7 @@ const AuthContextProvider = ({ children }) => {
   }
 
   // Context data
-  const authContextData = { loginUser, registerUser, logoutUser, authState }
+  const authContextData = { loadUser, loginUser, registerUser, logoutUser, authState }
 
   // Return provider
   return (
