@@ -49,7 +49,7 @@ const AuthContextProvider = ({ children }) => {
           response.data.accessToken
         )
 
-      await loadUser()
+      // await loadUser()
 
       return response.data
     } catch (error) {
@@ -68,7 +68,7 @@ const AuthContextProvider = ({ children }) => {
           response.data.accessToken
         )
 
-      await loadUser()
+      // await loadUser()
 
       return response.data
     } catch (error) {

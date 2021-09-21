@@ -6,7 +6,7 @@ import AlertMessage from '../layout/AlertMessage'
 
 const LoginForm = () => {
   // Context
-  const { loginUser } = useContext(AuthContext)
+  const { loginUser, loadUser } = useContext(AuthContext)
 
   // Local state
   const [loginForm, setLoginForm] = useState({
@@ -34,6 +34,7 @@ const LoginForm = () => {
         //alert will disappear after 5s:
         setTimeout(() => setAlert(null), 5000)
       }
+      loadUser()
     } catch (error) {
       console.error(error)
     }

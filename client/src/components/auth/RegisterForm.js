@@ -6,7 +6,7 @@ import AlertMessage from '../layout/AlertMessage'
 
 const RegisterForm = () => {
   // Context
-  const { registerUser } = useContext(AuthContext)
+  const { registerUser, loadUser } = useContext(AuthContext)
 
   // Local state
   const [registerForm, setRegisterForm] = useState({
@@ -40,6 +40,7 @@ const RegisterForm = () => {
         setAlert({ type: 'danger', message: registerData.message })
         setTimeout(() => setAlert(null), 5000)
       }
+      loadUser()
     } catch (error) {
       console.error(error)
     }
