@@ -8,6 +8,16 @@ Content-Type: application/json
 
 ###
 
+POST https://learn-it-vn-2021.herokuapp.com/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "ninhphan",
+  "password": "ninhphan"
+} 
+
+###
+
 POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 

@@ -34,7 +34,7 @@ const LoginForm = () => {
         //alert will disappear after 5s:
         setTimeout(() => setAlert(null), 5000)
       }
-      loadUser()
+      // loadUser()
     } catch (error) {
       console.error(error)
     }

@@ -40,7 +40,7 @@ const RegisterForm = () => {
         setAlert({ type: 'danger', message: registerData.message })
         setTimeout(() => setAlert(null), 5000)
       }
-      loadUser()
+      // loadUser()
     } catch (error) {
       console.error(error)
     }

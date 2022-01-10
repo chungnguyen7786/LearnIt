@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/AuthContext'
 
 const Landing = () => {
   const { loadUser } = useContext(AuthContext)
-  useEffect(() => loadUser(), [loadUser])
+  // useEffect(() => loadUser(), [loadUser])
   return <Redirect to='/login' />
 }
 
